@@ -1,11 +1,4 @@
-* recommended lec to watch : Lec 5
-
-# Power BI Course README
-# Lec 1
-
-## 📌 Overview
-
-This course teaches **Power BI**, a powerful data visualization and analytics tool used to:
+**Power BI** is a powerful data visualization and analytics tool used to:
 
 * Collect data from multiple sources
 * Clean and transform data
@@ -14,9 +7,9 @@ This course teaches **Power BI**, a powerful data visualization and analytics to
 * Share reports with others
 * Perform calculations using **DAX (Data Analysis Expressions)**
 
-Power BI can be thought of as a **data storytelling tool** that converts raw data into meaningful, interactive insights.
+Power BI converts raw data into meaningful, interactive insights.
 
-## 🖥️ Power BI Components
+## Power BI Components
 
 ### Power BI Desktop
 
@@ -30,24 +23,9 @@ Power BI can be thought of as a **data storytelling tool** that converts raw dat
 
 ---
 
-## 📊 Course Project
+## Structure
 
-The course includes a hands-on project using a **Formula One dataset**, which contains:
-
-* Drivers
-* Teams
-* Races
-* Lap times
-* Points
-* Seasons
-
-This dataset is chosen to demonstrate a wide range of Power BI features.
-
----
-
-## 🧩 Course Structure
-
-The course is divided into **5 parts**:
+This is divided into **5 parts**:
 
 ### 1️⃣ Data Preparation and Transformation
 
@@ -56,7 +34,7 @@ The course is divided into **5 parts**:
 * Handle missing or incorrect values
 * Set appropriate data types
 
-#### 🔧 Query Editor
+#### Query Editor
 
 * Tool used for data cleaning and transformation
 * Helps fix issues such as:
@@ -135,7 +113,7 @@ DAX is used for advanced data calculations.
 
 ---
 
-## 🔄 Power BI Workflow
+## Workflow
 
 1. Load Data
 2. Clean Data
@@ -146,91 +124,43 @@ DAX is used for advanced data calculations.
 
 ---
 
-## 🧠 Key Takeaway
+## Summary
 
 Power BI enables users to transform raw data into **interactive dashboards and insightful reports**.
-
----
-
-## ⚡ Quick Summary
-
-* **Power BI Desktop** → Report creation
-* **Query Editor** → Data cleaning
-* **Data Modeling** → Table relationships
-* **Visualizations** → Charts and reports
-* **Power BI Service** → Sharing and collaboration
-* **DAX** → Advanced calculations
-
----
-
-## 🧭 Memory Trick
 
 **Load → Clean → Model → Visualize → Share → Calculate**
 
 ---
-
-## 🚀 Next Steps
-
-* Start with data loading and cleaning
-* Practice building relationships
-* Create simple dashboards
-* Learn basic DAX functions
-* Publish your first report
-
 ---
-# ==============================================================================================
-# Lec 2
 
-# Power BI Ecosystem README
+# Power BI Ecosystem
 
-## 🌐 What is Power BI (Simple Meaning)
+## What is Power BI
 
 ![alt text](image.png)
 
-Microsoft defines **Power BI** as a system that:
+**Power BI** is a system that:
 
 > Takes scattered, unrelated data and turns it into meaningful, interactive insights.
-
-### Beginner Explanation:
-
-You may have data in multiple places:
-
-* Excel files
-* Databases
-* Cloud applications
-* Local folders
-
-Power BI acts as a **data translator and visualization tool** that:
-
-* Connects different data sources
-* Cleans and prepares data
-* Builds relationships between data
-* Converts it into interactive dashboards and reports 📊
-
----
-
-## 🧠 Key Concept: Power BI Ecosystem
 
 Power BI is not a single tool. It is a **collection of tools working together**.
 
 ### Components work as a team:
 
-* One tool prepares data
-* One tool builds reports
-* One tool shares reports
-* One tool allows viewing on mobile devices
+* One tool prepares data - Power Query
+* One tool builds reports - Power BI Desktop
+* One tool shares reports - Power BI Service
+* One tool allows viewing on mobile devices - Power BI Mobile Apps
 
 This complete system is called the **Power BI Ecosystem**.
 
 ---
 
-## 🧩 Components of Power BI Ecosystem
+## Components of Power BI Ecosystem
 
-### 💻 1. Power BI Desktop
+### 1. Power BI Desktop
 
 ![alt text](image-1.png)
-
-The most important tool for beginners.
 
 * Installed on your local computer
 * Completely free
@@ -238,7 +168,7 @@ The most important tool for beginners.
 
 #### Main Areas in Power BI Desktop:
 
-##### 🔧 Query Editor (Data Preparation)
+##### Query Editor (Data Preparation)
 
 * Load data from sources
 * Clean and transform data
@@ -250,11 +180,11 @@ The most important tool for beginners.
 * Convert text to numbers
 * Fix date formats
 
-👉 Think of it as a **data cleaning stage**
+> Think of it as a **data cleaning stage**
 
 ---
 
-##### 🧱 Data View (Data Modeling)
+##### Data View (Data Modeling)
 
 * View tables
 * create insight and analysis
@@ -264,30 +194,22 @@ The most important tool for beginners.
 
 * Connect "Drivers" table with "Race Results" table
 
-👉 Think of it as building the **structure of data**
+> Think of it as building the **structure of data**
 
 ---
 
-##### 📊 Report View (Visualization)
+##### Report View (Visualization)
 
 * Create charts and graphs
 * Design dashboards
 * Add filters (slicers)
 * create your visualizations and your report
 
-👉 This is the **final output stage**
+> This is the **final output stage**
 
 ---
 
-### 💡 Quick Memory
-
-**Query Editor → Clean**
-**Data View → Connect**
-**Report View → Show**
-
----
-
-### ☁️ 2. Power BI Service (Cloud Platform)
+### 2. Power BI Service (Cloud Platform)
 
 ![alt text](image-2.png)
 
@@ -305,11 +227,11 @@ The online version of Power BI.
 * Requires Microsoft account login
 * Not fully free (trial available)
 
-👉 Think of it as **online sharing and collaboration platform**
+> Think of it as **online sharing and collaboration platform**
 
 ---
 
-### 📱 3. Power BI Mobile
+### 3. Power BI Mobile
 
 ![alt text](image-3.png)
 
@@ -321,11 +243,11 @@ Mobile application for Power BI.
 * Interact with dashboards
 * Access insights anytime
 
-👉 Used only for **viewing**, not creating
+> Used only for **viewing**, not creating
 
 ---
 
-## 🔄 How Power BI Works (Workflow)
+## How Power BI Works (Workflow)
 
 1. Build reports in **Power BI Desktop**
 2. Publish reports to **Power BI Service**
@@ -333,58 +255,21 @@ Mobile application for Power BI.
 
 ---
 
-## 🧪 Real-Life Example
-
-Scenario: Sales Analysis
-
-* Data stored in Excel and databases
-* Load and clean data in Power BI Desktop
-* Build relationships between tables
-* Create visual reports
-
-Then:
-
-* Publish report to Power BI Service
-* Manager views report on mobile device
+Power BI Ecosystem = **Desktop (Build) + Service (Share) + Mobile (View)**
 
 ---
 
-## 🧠 One-Line Understanding
-
-Power BI Ecosystem =
-**Desktop (Build) + Service (Share) + Mobile (View)**
-
----
-
-## ⚡ Beginner Summary
+## Summary
 
 * **Power BI Desktop** → Report creation
 * **Query Editor** → Data cleaning
-* **Data View** → Data modeling
+* **Data View** → Data modeling (connecting)
 * **Report View** → Visualization
 * **Power BI Service** → Sharing and collaboration
 * **Power BI Mobile** → Viewing reports
 
 ---
-
-## 🧭 Memory Trick
-
-**Build → Publish → View**
-
 ---
-
-## 🚀 Next Steps
-
-* Install Power BI Desktop
-* Load sample dataset
-* Practice cleaning data in Query Editor
-* Create basic visualizations
-* Publish your first report
-
----
-
-# =======================================================================================
-# Lec 4
 
 # How to Install Power BI Desktop
 
@@ -418,31 +303,17 @@ Based on your system type, select the appropriate file from the download prompt:
 ## Step 5: Launch Power BI Desktop
 1. Once the installation is complete, uncheck the "Launch Power BI Desktop" box to close the wizard, and click **Finish**.
 2. Go to your desktop and double-click the new **Power BI** shortcut.
-3. When the application opens, an initial welcome window will appear. Click the **X** to close it.
+3. When the application opens, an initial welcome window will appear. close it.
 4. You are now ready to use your blank, untitled Power BI file!
 
 ---
+---
 
-# ========================================================================================
-# Lec 5
-
-# Power BI Interface README
-
-## 📌 Overview
-
-This document explains the **Power BI Desktop Interface** in a beginner-friendly way.
-
-It covers:
-
-* Welcome screen
-* Main workspace
-* Views (Report, Data, Model)
-* Power Query Editor
-* Basic workflow
+# Power BI Interface 
 
 ---
 
-## 🏁 Welcome Screen
+## Welcome Screen
 
 When you open Power BI Desktop, you will see the welcome screen.
 
@@ -454,11 +325,11 @@ When you open Power BI Desktop, you will see the welcome screen.
 * **Recent Sources** → Previously used data connections
 * **Open Reports** → Open existing Power BI files
 
-👉 This is just a starting point. You can close it to enter the main workspace.
+This is just a starting point. You can close it to enter the main workspace.
 
 ---
 
-## 🖥️ Main Workspace Overview
+## Main Workspace Overview
 
 After closing the welcome screen, you enter the main working area where reports are created.
 
@@ -474,11 +345,11 @@ The ribbon contains different tabs:
 * **View** → Change layout, themes
 * **Help** → Documentation and support
 
-👉 New tabs may appear depending on what you select.
+New tabs may appear depending on what you select.
 
 ---
 
-## 📊 Left Panel: Views
+## Left Panel: Views
 
 There are **3 main views** in Power BI Desktop:
 
@@ -495,7 +366,7 @@ There are **3 main views** in Power BI Desktop:
 * **Visualizations** → Choose chart types
 * **Fields** → Data columns
 
-👉 You drag fields into visuals (X-axis, Y-axis, values, legend)
+You drag fields into visuals (X-axis, Y-axis, values, legend)
 
 ---
 
@@ -517,19 +388,19 @@ There are **3 main views** in Power BI Desktop:
 
 ---
 
-## 🔧 Power Query Editor (Data Preparation)
+## Power Query Editor (Data Preparation)
 
 This is used for **data cleaning and transformation**.
 
 ### How to open:
 
-* Click **Transform Data**
+Home Tab -> **Transform Data**
 
 ![alt text](image-14.png)
 
 ---
 
-### Interface Overview:
+### Interface:
 
 #### Left Panel: Queries
 
@@ -546,27 +417,18 @@ This is used for **data cleaning and transformation**.
 
 ---
 
-### 🔄 Applied Steps (Very Important)
+### Applied Steps
 
 * Each transformation is recorded step-by-step
 * Steps run in sequence (top → bottom)
 
-#### Examples:
-
-* Source (data loaded)
-* Navigation
-* Promoted Headers
-* Changed Data Types
-* Removed Columns
-
-👉 You can:
-
+You can:
 * Edit steps
 * Delete steps (undo transformation)
 
 ---
 
-### 🛠 Common Transformations
+### Common Transformations
 
 * Change data types (text → number)
 * Remove columns
@@ -582,9 +444,9 @@ This is used for **data cleaning and transformation**.
 
 ---
 
-## 🔄 Power BI Workflow
+## Power BI Workflow
 
-Typical steps:
+steps:
 
 1. Get Data
 2. Transform Data (Power Query Editor)
@@ -593,7 +455,7 @@ Typical steps:
 
 ---
 
-## 📥 Loading Data Example (Excel)
+## Loading Data Example (Excel)
 
 Steps:
 
@@ -620,7 +482,7 @@ Steps:
 
 ---
 
-## 📊 Creating First Visualization
+## Creating First Visualization
 
 1. Select a chart type (e.g., Area Chart)
 2. Drag fields into:
@@ -631,7 +493,7 @@ Steps:
 
 ---
 
-## ⚙️ Managing Queries
+## Managing Queries
 
 * Right-click query → **Enable Load**
 
@@ -646,7 +508,7 @@ Steps:
 
 ---
 
-## 💾 Saving Power BI File
+## Saving Power BI File
 
 Steps:
 
@@ -655,46 +517,30 @@ Steps:
 ![alt text](image-15.png)
 ![alt text](image-16.png)
 
-👉 This is the Power BI report file
+This is the Power BI report file
 
 ---
 
-## 🧠 Key Takeaways
+## Summary
 
 * Power BI has 3 main views: Report, Data, Model
-* Power Query Editor is used for data cleaning
-* Applied Steps track all transformations
-* Visualizations are created by dragging fields
-* Data must be loaded to build reports
-
----
-
-## ⚡ Quick Summary
-
 * **Report View** → Create visuals
 * **Data View** → View data
 * **Model View** → Manage relationships
-* **Power Query Editor** → Transform data
+* Power Query Editor is used for data cleaning
+* Applied Steps track all transformations
 * **.pbix** → Power BI file format
 
 ---
-
-## 🧭 Memory Trick
-
-**Load → Transform → Model → Visualize → Save**
-
 ---
 
-# =========================================================================================
-# Lec 6
+# Power BI Formula One Dataset
 
-# Power BI Formula One Dataset README
+## Overview
 
-## 📌 Overview
+Understand dataset.
 
-This section of the course focuses on understanding the **dataset** used to build a Power BI report.
-
-The dataset contains **Formula One racing data (1952–2020)** and will be used to analyze:
+The dataset contains **Formula One racing data** and will be used to analyze:
 
 * Races
 * Drivers
@@ -704,12 +550,6 @@ The dataset contains **Formula One racing data (1952–2020)** and will be used 
 * Dates
 * Locations
 
-👉 Before building reports, it is essential to understand what the data represents.
-
----
-
-## 🎯 Why This Dataset is Useful
-
 This dataset is ideal for learning Power BI because it includes multiple data types:
 
 * **Geographical Data** → Circuit locations
@@ -717,15 +557,11 @@ This dataset is ideal for learning Power BI because it includes multiple data ty
 * **Date Data** → Race dates
 * **Reference IDs** → Race ID, Driver ID, Constructor ID
 
-👉 Power BI works best with structured and diverse data, making this dataset perfect for learning.
-
----
-
-## 🏎️ What is Formula One?
+## What is Formula One?
 
 Formula One (F1) is a professional international car racing sport.
 
-### Basic Structure:
+### Structure:
 
 * A season consists of multiple races
 * Each race is called a **Grand Prix**
@@ -736,15 +572,11 @@ Formula One (F1) is a professional international car racing sport.
 
 ---
 
-## 📘 Key Formula One Terms
-
 ### 1️⃣ Grand Prix
 
 * A single race event
 * Example: British Grand Prix, Monaco Grand Prix
 * A season contains multiple Grand Prix races
-
----
 
 ### 2️⃣ Circuit
 
@@ -753,22 +585,16 @@ Formula One (F1) is a professional international car racing sport.
 👉 Grand Prix = Event
 👉 Circuit = Location (Track)
 
----
-
 ### 3️⃣ Constructor
 
 * The team/company that builds the car
 
 **Examples:** Mercedes, Ferrari, Red Bull
 
----
-
 ### 4️⃣ Driver
 
 * The person driving the car
 * Each constructor usually has **two drivers**
-
----
 
 ### 5️⃣ Championship
 
@@ -784,7 +610,7 @@ Two types of championships:
 
 ---
 
-## 🧮 Points System
+## Points System
 
 ### Current System:
 
@@ -804,15 +630,14 @@ Two types of championships:
 * No points below 10th position
 * +1 bonus point for fastest lap (if in top 10)
 
-### ⚠️ Important Note
+### Important Note
 
 Historical seasons used different point systems (e.g., 10 points for 1st place).
-
-👉 Be careful when comparing different years.
+So Be careful when comparing different years.
 
 ---
 
-## 🏁 Qualifying & Grid Position
+## Qualifying & Grid Position
 
 * Qualifying determines starting position
 * Starting position is called **grid position**
@@ -824,7 +649,7 @@ Historical seasons used different point systems (e.g., 10 points for 1st place).
 
 ---
 
-## 📂 Dataset Structure
+## Dataset Structure
 
 Download the data by visiting github: 
 (https://github.com/malvik01/powerbi) -> code -> download zip
@@ -833,7 +658,7 @@ The dataset consists of **5 main tables/files**:
 
 ---
 
-## 📊 Main Tables
+## Main Tables
 
 ### 1️⃣ Results Table (Fact Table)
 
@@ -850,18 +675,6 @@ Contains race results for each driver.
 * `finish position`
 * `points`
 
-#### Purpose:
-
-Answers:
-
-* Who raced?
-* Which team?
-* Starting position?
-* Final position?
-* Points earned?
-
----
-
 ### 2️⃣ Races Table
 
 Contains race event details.
@@ -875,14 +688,6 @@ Contains race event details.
 * `Grand Prix name`
 * `date`
 
-#### Purpose:
-
-* When the race happened
-* Which round in the season
-* Where it took place
-
----
-
 ### 3️⃣ Circuits Table
 
 Contains track information.
@@ -891,13 +696,6 @@ Contains track information.
 
 * Circuit name
 * Location
-
-#### Purpose:
-
-* Where the race occurred
-* Useful for maps and geographical analysis
-
----
 
 ### 4️⃣ Drivers Table
 
@@ -909,13 +707,6 @@ Contains driver details.
 * Nationality
 * Date of birth
 
-#### Purpose:
-
-* Identify drivers
-* Analyze performance, nationality, age
-
----
-
 ### 5️⃣ Constructors Table
 
 Contains team information.
@@ -925,13 +716,7 @@ Contains team information.
 * Constructor name
 * Nationality
 
-#### Purpose:
-
-* Identify teams
-
----
-
-## 🔗 Relationships in Power BI
+## Relationships in Power BI
 
 Tables are connected using ID fields:
 
@@ -940,74 +725,9 @@ Tables are connected using ID fields:
 * `constructor ID`
 * `circuit ID`
 
-👉 Example:
+Example:
 
 * Results table → Driver ID
 * Drivers table → Driver ID
 
 These connections are called **relationships**.
-
----
-
-## ⚠️ Raw Data Format
-
-Files may be in different formats:
-
-* JSON
-* CSV
-* Text
-
-👉 This is normal.
-
-Data may look messy initially but will be cleaned in Power BI.
-
----
-
-## 🔧 Load & Transform Process
-
-Before analysis, data must be prepared:
-
-1. Load data into Power BI
-2. Clean and transform data
-3. Set correct data types
-4. Organize columns
-5. Build data model
-
----
-
-## 🔄 Power BI Workflow
-
-```
-Raw Data → Load → Transform → Model → Visualize
-```
-
----
-
-## 📌 Table Summary
-
-* **Results** → Race outcomes
-* **Races** → Event details
-* **Circuits** → Track information
-* **Drivers** → Driver details
-* **Constructors** → Team details
-
----
-
-## 🎯 Why This Matters
-
-This dataset helps you learn:
-
-* Working with multiple data sources
-* Building relationships between tables
-* Designing a proper data model
-* Creating meaningful reports
-
-👉 You are not just learning Power BI tools, but how to think like a **data analyst/developer**.
-
----
-
-## 🧠 One-Line Summary
-
-This dataset contains Formula One racing data that will be cleaned, connected, and analyzed using Power BI.
-
----
