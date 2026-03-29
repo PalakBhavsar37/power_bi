@@ -1,6 +1,6 @@
-# Lec 20 - Logically Ordering Your Applied Steps
+# Logically Ordering Your Applied Steps
 
-In this guide, we will explore the "Applied Steps" pane in the Power Query Editor. We will look at how the top-to-bottom execution order impacts your data, how swapping steps can break your queries, and a brief introduction to the underlying M language.
+Explore the "Applied Steps" pane in the Power Query Editor. How the top-to-bottom execution order impacts your data, how swapping steps can break your queries.
 
 ---
 
@@ -13,13 +13,9 @@ The "Applied Steps" pane on the right-hand side of the Power Query Editor acts a
 
 - **The "Source" Step:** The very first step at the top is usually the "Source" step. Clicking this shows you the raw data exactly as it was pulled from your original file, before any transformations.
 
-- **Cumulative Logic:** As you go down the list, each step builds upon the results of the steps preceding it. Therefore, the sequence in which you apply logic is critical for efficiency and preventing errors.
-
 ---
 
 ## 2. Auto-Generated Steps and Deletion
-
-Power Query often tries to be helpful by automatically applying certain transformations, but sometimes these are redundant.
 
 ### The Auto "Changed Type" Step
 
@@ -39,7 +35,7 @@ If you know you are going to manually change the data types later in your query,
 - Click the **X icon** on the left side of the step name.
 ![alt text](image-1.png)
 
-⚠️ **Warning Prompt:** You will get a warning stating that deleting a step cannot be undone.
+**Warning Prompt:** You will get a warning stating that deleting a step cannot be undone.
 
 - Click **Delete**.
 ![alt text](image-2.png)
@@ -88,7 +84,7 @@ Continuing from Example A, here is how to fix the broken **"Changed Type"** step
 - Select the remaining columns in your table that need data type adjustments.
 - Change their data types (e.g., change "Round" to a Whole Number).
 
-⚠️ **Insert Step Prompt:** Power Query will warn you that you are inserting a step into the middle of your query. Click **Insert**.
+**Insert Step Prompt:** Power Query will warn you that you are inserting a step into the middle of your query. Click **Insert**.
 
 ![alt text](image-9.png)
 ![alt text](image-10.png)
@@ -105,20 +101,18 @@ just like this, change round & circuit column's data type to be whole number.
 
 ## 5. Applying Changes
 
-Always remember to save your transformations once your Applied Steps are flowing logically without errors.
-
 - Go to the **Home tab**.
 - Click **Close & Apply** on the far left.
 - Save your main Power BI Desktop file (**Ctrl + S**).
 
-# =====================================================================================
-# Lec 21 - Replacing Values
+---
+---
 
-In this guide, we will explore how to find and replace specific text or numbers within your data. We will also cover a crucial concept regarding the "scope" of your replacements to ensure you are modifying the correct data.
+# Replacing Values
+
+How to find and replace specific text or numbers within data, "scope" of your replacements:
 
 ## 1. How to Replace Values
-
-Replacing values is a straightforward process, similar to the "Find and Replace" feature in Excel or Word, but it is strictly applied to the column you have selected.
 
 ### Example A: Replacing "Grand Prix" with "GP"
 
@@ -132,7 +126,7 @@ Let's say you want to shorten the text in your "Grand Prix" column by replacing 
 
 In the pop-up window:
 
-- **Value To Find:** Type Grand Prix. (Note: If you had clicked a specific cell before starting, Power Query might auto-populate this box with the exact contents of that cell. You can just overwrite it).
+- **Value To Find:** Type Grand Prix.
 - **Replace With:** Type GP.
 - Click **OK**.
 ![alt text](image-15.png)
@@ -142,7 +136,7 @@ In the pop-up window:
 
 ---
 
-## 2. ⚠️ Crucial Concept: The Scope of Replacement
+## 2. Concept: The Scope of Replacement
 
 It is incredibly important to understand that the **"Replace Values"** function only looks inside the column you currently have selected. It does not search your entire table.
 
@@ -170,7 +164,7 @@ Let's say you want to change the year 2020 to 1010.
 ![alt text](image-18.png)
 ![alt text](image-19.png)
 
-**Result:** The operation now works successfully because you told Power Query to look in the correct column. (Note: As this was just an example, remember to delete this applied step so your year data remains accurate!)
+**Result:** Now Power Query looks in the correct column. 
 
 Note : You can select multiple columns if you would like to increase the scope of values to replace.
 
@@ -184,10 +178,12 @@ Note : You can select multiple columns if you would like to increase the scope o
 **Result:** Your updated, cleaned data loads into the Power BI model.
 Remember to **Save (Ctrl+S)** your Power BI Desktop file.
 
-# =====================================================================================
-# Lec 22 - Duplicate vs Reference
+---
+---
 
-In this guide, we will explore two useful operations for copying queries in the Power Query Editor: Duplicate and Reference. Understanding the difference between these two is essential for managing your workflow efficiently.
+# Duplicate vs Reference
+
+Two useful operations for copying queries in the Power Query Editor: Duplicate and Reference.
 
 ## 1. Duplicating a Query
 
@@ -219,13 +215,13 @@ While duplicating copies the entire history of steps, referencing a query only c
 ![alt text](image-23.png)
 ![alt text](image-24.png)
 
-**Result:** A new query appears. If you look at its **Applied Steps** pane, there is only one step: **Source**. None of the previous transformation steps are listed because this query simply points to the final, transformed output of the original query.
+**Result:** A new query appears. If you look at its **Applied Steps** pane, there is only one step: **Source**. 
 
 - (Optional) Rename this new query (e.g., "Reference").
 
 ---
 
-## 3. ⚠️ Dependency and Deletion Rules
+## 3. Dependency and Deletion Rules
 
 Because a Referenced query relies directly on the final output of another query, a hard dependency is created between them.
 
@@ -243,17 +239,20 @@ Because a Referenced query relies directly on the final output of another query,
 
 ### How to resolve the dependency error:
 
-If you want to delete a query that is being referenced, you must work backward and clear out the dependencies first:
+If you want to delete a query that is being referenced, you must clear out the dependencies first:
 
 - First, locate the query that is doing the referencing (e.g., the "Reference" table).
 - Right-click it and click **Delete**.
 - Once the dependent query is gone, you can safely right-click and **Delete** the original base query (e.g., the "Duplicated" table) without encountering any errors.
 
-# ==================================================================================
-# Lec 23 - Appending Queries
+---
+---
 
-In this guide, we will explore how to combine multiple tables into a single table using the "Append" operation in the Power Query Editor. Appending essentially stacks the rows of one table directly underneath the rows of another table.
+# Appending Queries
+
+How to combine multiple tables into a single table using the "Append" operation in the Power Query Editor. Appending essentially stacks the rows of one table directly underneath the rows of another table.
 ![alt text](image-27.png)
+
 ---
 
 * Home Tab : ![alt text](image-28.png)
@@ -319,16 +318,16 @@ Make duplicate of races query. Under year column's dropdowm menu -> select 2020 
 
 ---
 
-## 3. ⚠️ Crucial Concept: Matching Column Names
+## 3. Concept: Matching Column Names
 
 In append1 table -> click on widget next to the Source step (to see the sources of tables.)
-![alt text](image-42.png) first source is 2020.
+![alt text](image-42.png) See, first source is 2020.
 
 When you append tables together, Power Query aligns the data based on the **Column Headers**. It is highly recommended that your tables have identical column structures before appending them.
 
 ### What happens if column names don't match?
 
-Let's say your races_2020 table has a column named **Round Number** ![alt text](image-43.png) (change round -> round_number), but your 2018 and 2019 tables have that exact same data under a column simply named **Round**.
+Let's say your races_2020 table has a column named **Round_Number** ![alt text](image-43.png) (change round -> round_number), but your 2018 and 2019 tables have that exact same data under a column simply named **Round**.
 
 If you append them together, Power Query will not combine those columns. Instead, it will create both columns in your new appended table:
 
@@ -354,12 +353,12 @@ verify by clicking on source widget of append1 table (see the source "races_2018
 ![alt text](image-46.png)
 ---
 
-(Note: If you were just following along for practice, remember to delete your test tables and appended queries so they don't clutter your project!)
+---
+---
 
-# ====================================================================================
-# Lec 24 - Removing Duplicates
+# Removing Duplicates
 
-In this guide, we will explore how to clean your dataset by finding, removing, or keeping duplicate records. The most critical concept to understand here is that Power Query determines what counts as a "duplicate" based entirely on exactly which columns you currently have selected.
+How to clean your dataset by finding, removing, or keeping duplicate records:
 
 ---
 
@@ -395,7 +394,7 @@ If you select only one column, Power Query will delete any row that shares a val
 ![alt text](image-49.png)
 ![alt text](image-50.png)
 
-**Result:** Rows 4 and 5 are both deleted. Even though Row 5 had a unique '2' in Column C, Power Query only looked at Column A. Since Column A had a '1' in rows 1, 4, and 5, it kept the first instance (Row 1) and aggressively deleted the others.
+**Result:** Rows 4 and 5 are both deleted. Since Column A had a '1' in rows 1, 4, and 5, it kept the first instance (Row 1) and aggressively deleted the others.
 
 ---
 
@@ -403,7 +402,7 @@ If you select only one column, Power Query will delete any row that shares a val
 
 If you want to ensure you only delete rows that are 100% identical across every single column, you must select the entire table first.
 
-- Select all columns in your table (you can click the first column header, hold **Shift**, and click the last column header, or press **Ctrl + A / Cmd + A** inside the table).
+- Select all columns in your table (you can click the first column header, hold **Shift** , and click the last column header, or press **Ctrl + A / Cmd + A** inside the table).
 - Go to the **Home tab -> Remove Rows -> Remove Duplicates**.
 
 ![alt text](image-51.png)
@@ -427,18 +426,16 @@ The **"Keep Duplicates"** function is the exact inverse of removing them. It del
 ![alt text](image-53.png)
 ![alt text](image-54.png)
 
-**Result:** Using our example table and selecting all columns, Power Query would delete Rows 2, 3, and 5 because they are unique. It would only leave Rows 1 and 4 on the screen, allowing you to easily investigate the duplicated data.
+**Result:** Using our example table and selecting all columns, Power Query would delete Rows 2, 3, and 5 because they are unique. It would only leave Rows 1 and 4 on the screen, allowing to easily investigate the duplicated data.
 
-# =================================================================================
-# Lec 25 - Transpose, Reverse rows, Count rows
+---
+---
 
-In this guide, we will explore three structural table operations in the Power Query Editor: Transpose, Reverse Rows, and Count Rows. These functions fundamentally change the shape, order, or output of your entire table.
+# Transpose, Reverse rows, Count rows
 
 ---
 
 ## 1. Setting Up Dummy Data
-
-To practice these operations without affecting real data, the lecture starts by creating a temporary dummy table.
 
 ### How to enter dummy data:
 
@@ -446,6 +443,7 @@ To practice these operations without affecting real data, the lecture starts by 
 -> Click on Enter Data.
 -> Create a simple 3x3 table (e.g., Column 1, 2, 3 with rows numbered 1, 2, 3).
 -> Name the table "Table" and click OK.
+
 ![alt text](image-55.png)
 ---
 
@@ -453,7 +451,7 @@ To practice these operations without affecting real data, the lecture starts by 
 
 ### Theory:
 
-The Transpose operation simply rotates your entire table by 90 degrees. It turns your rows into columns, and your columns into rows. For example, all the data values running down your very first column will be flipped to run across your very first row instead.
+The Transpose operation simply rotates your entire table by 90 degrees. It turns your rows into columns, and your columns into rows. For example, all the data values running down your very first column will be flipped to run across your very first row.
 
 ### How to Transpose a table:
 
@@ -467,7 +465,7 @@ The Transpose operation simply rotates your entire table by 90 degrees. It turns
 
 **Result:** Your table is immediately flipped.  
 
-**Tip:** If you click Transpose a second time, it will flip the data another 90 degrees, essentially reverting it back to its exact original layout! You will get plenty of practice with this specific function when dealing with heavily pivoted files (like circuit data) later in your project.
+**Tip:** If you click Transpose a second time, it will flip the data another 90 degrees, essentially reverting it back to its exact original layout! 
 
 ---
 
@@ -475,7 +473,7 @@ The Transpose operation simply rotates your entire table by 90 degrees. It turns
 
 ### Theory:
 
-This operation does exactly what it says on the tin: it completely reverses the top-to-bottom order of your rows. The row currently sitting at the very top of your table will be pushed to the very bottom, and the row at the bottom will become the new row number 1.
+This operation does exactly what it says: it completely reverses the top-to-bottom order of your rows.
 
 ### How to Reverse Rows:
 
@@ -486,7 +484,7 @@ This operation does exactly what it says on the tin: it completely reverses the 
 ![alt text](image-58.png)
 ![alt text](image-59.png)
 
-**Result:** If your rows were originally ordered 1, 2, 3, 4, they will now be ordered 4, 3, 2, 1.
+**Result:** If your rows were originally ordered 1, 4, 3, 2, they will now be ordered 2, 3, 4, 1.
 
 ---
 
@@ -509,17 +507,9 @@ Unlike most operations that return a modified table, the "Count Rows" function c
 **Result:** Your table view will disappear entirely, and Power Query will return a single scalar value representing the total row count (e.g., simply the number 3).
 
 ---
+---
 
-## 💡 Lecture Cleanup
-
-Since these operations drastically alter the structure of the data, they were demonstrated on a dummy table.
-
--> Right-click the temporary "Table" query in your left-hand Queries pane.
-
--> Click Delete as you will not be needing it for the actual project.
-
-# ==================================================================================
-# Lec 26 - Loading Circuits JSON File
+# Loading Circuits JSON File
 
 Open Power Query Editor of races :
 Home Tab -> New Source -> More -> Under File: JSON -> connect
@@ -533,7 +523,9 @@ Home Tab -> New Source -> More -> Under File: JSON -> connect
 
 Be sure to remove the relationship between races & circuits query (in data model view)
 
-# ===================================================================================
+---
+---
+
 # Lec 27 - Loading the drivers text file & Assignment
 
 The file is Tab delimited.
@@ -545,30 +537,30 @@ Home -> Get Data -> Text/CSV
 * Assignment
 ![alt text](image-71.png)
 
-# ===================================================================================
-# Lec 28 - Loading the Constructors csv file & Assignment
+---
+---
+
+# Loading the Constructors csv file & Assignment
 
 * Assignment
 ![alt text](image-72.png)
 
-# ===================================================================================
-# Lec 28 - Loading the Results csv file & Assignment
+---
+---
+
+# Loading the Results csv file & Assignment
 
 * Assignment
 ![alt text](image-73.png)
 
-# ===================================================================================
-# Lec 30 - Group By
+---
+---
 
-# Lec - Group By Operation in Power Query
-
-In this guide, we will explore the "Group By" operation in the Power Query Editor. This is a highly useful feature that allows you to summarize and consolidate multiple rows of data into single summary values using mathematical aggregations.
+# Group By
 
 ---
 
 ## 1. Theory: Grouping and Aggregation
-
-Before jumping into the tool, it is important to understand what is happening behind the scenes.
 
 ### What is Group By?
 
@@ -576,7 +568,7 @@ Grouping takes values spread across various rows and consolidates them based on 
 
 ### What is an Aggregation Function?
 
-An aggregation function is a function where the values of multiple rows are grouped together to form a single summary value. (takes the multiple rows that were grouped together and performs a calculation to form a single summary value for that group). Common aggregations include:
+An aggregation function is a function where the values of multiple rows are grouped together to form a single summary value. Common aggregations include:
 
 - **Sum:** Adds the values together.
 - **Average:** Calculates the mean value.
@@ -585,7 +577,7 @@ An aggregation function is a function where the values of multiple rows are grou
 
 ---
 
-### The Department Illustration
+### Ex.
 
 Imagine a table with Employee ID, Department, Location, and Salary.
 
@@ -600,7 +592,7 @@ Imagine a table with Employee ID, Department, Location, and Salary.
 > Minimum salary for each dept.
 ![alt text](image-76.png)
 
-- If you **Group By Location AND Department**, the summary table will create a unique row for every combination of location&dept. (e.g., UK & Finance, UK & HR, USA & HR) and aggregate the salaries for each specific combination.
+- If you **Group By Location AND Department**, the summary table will create a unique row for every combination of location & dept. (e.g., UK & Finance, UK & HR, USA & HR) and aggregate the salaries for each specific combination.
 
 ![alt text](image-77.png)
 
@@ -612,28 +604,27 @@ Imagine a table with Employee ID, Department, Location, and Salary.
 
 ## 2. Where to Find the Group By Tool
 
-You can access the Group By operation in three different ways within the Power Query Editor:
+access the Group By operation in three different ways within the Power Query Editor:
 
 -> On the Home tab, in the Transform section.
-
+![alt text](image-102.png)
 
 -> On the Transform tab, in the Table section.
 ![alt text](image-79.png)
 
 -> By Right-clicking on any column header and selecting "Group By..." from the context menu.
-
+![alt text](image-103.png)
 
 ---
 
 ## 3. Basic Group By (Single Column & Aggregation)
 
-In these examples, we will use "Results" query to demonstrate single groupings.
-
 ---
 
+use "Results" query.
 ### Example A: Counting Total Races per Driver (Count Rows)
 
-> Let's perform a count aggregation and count the total occurrences of each driver_id. (Let's find out exactly how many races each driver has participated in.)
+> Let's perform a count aggregation and count the total occurrences of each driver_id. (find exactly how many races each driver has participated in.)
 
 -> Select the Driver ID column.
 
@@ -720,32 +711,17 @@ Operation: Count Rows
 ![alt text](image-88.png)
 ![alt text](image-89.png)
 
-**Result:** You get a highly detailed summary. 
 Sort 'Total Points' column in descending order. For example, it will show that Driver 1 driving for Constructor 131 scored 2865 points across 110 races, but Driver 1 driving for Constructor 1 scored 913 points across 156 races.
 ![alt text](image-90.png)
 
 ---
-
-## 💡 Lecture Cleanup
-
-As with previous data transformation exercises, these groupings dramatically change the structure of your data. Because this was just for demonstration:
-
--> Look at the Applied Steps pane on the right side of the screen.
-
--> Click the X next to your "Grouped Rows" and "Sorted Rows" steps to delete them and return your Results query back to its normal state before the next lecture.
-
-# ==================================================================================
-# Lec 31 - Pivoting and Unpivoting
-
-# Lec - Pivot and Unpivot Operations in Power Query
-
-In this guide, we will explore how to restructure your tables using the **"Pivot"** and **"Unpivot"** operations in the Power Query Editor. These tools allow you to rotate your data from a vertical list into a horizontal matrix, and vice versa.
-
 ---
 
-## 1. Setting Up Dummy Data
+# Pivoting and Unpivoting
 
-To demonstrate these concepts, the lecture starts by creating a temporary table with some basic sales data.
+These tools allow to rotate data from a vertical list into a horizontal matrix, and vice versa.
+
+## 1. Setting Up Dummy Data
 
 ### How to enter dummy data:
 
@@ -756,14 +732,6 @@ To demonstrate these concepts, the lecture starts by creating a temporary table 
 -> Create three columns and name them: **Country, City, and Sales**.
 
 -> Enter the following four rows of data:
-
-UK | London | 30000  
-
-USA | Chicago | 25000  
-
-Germany | Berlin | 60000  
-
-USA | New York | 100000  
 
 -> Name the table **"Table"** and click **OK**.
 ![alt text](image-91.png)
@@ -798,13 +766,13 @@ Let's turn the individual cities into their own column headers to see their sale
 ![alt text](image-94.png)
 
 **Result:** The unique cities (**London, Chicago, Berlin, New York**) are now column headers running across the top.
+here, each of the city values is now a column header, and then the sales are the values for each column.
 
-here, each of the city values is now a column, and then the sales are the values for each column.
 ---
 
 ### Understanding the Nulls:
 
-You will notice many **null values** in this new matrix. For example, at the cross-section of the **"Germany"** row and the **"London"** column, there is a null and no sales data. This makes perfect sense because London is not in Germany; that specific combination of data did not exist in our original table.
+For example, at the cross-section of the **"Germany"** row and the **"London"** column, there is a null and no sales data. This makes perfect sense because London is not in Germany; that specific combination of data did not exist in our original table.
 
 ---
 
@@ -864,25 +832,14 @@ Your table now looks almost exactly like the original dummy data, except the col
 -> Double-click the **Value** column header and rename it back to **Sales**.
 
 ---
+---
 
-## 💡 Lecture Cleanup
-
-Because this was just an illustration of how these structural changes work:
-
--> Look at your **Queries pane** on the left side of the screen.
-
--> Right-click the dummy **"Table"** query you created.
-
--> Click **Delete** as you will not be needing it for the actual project.
-
-# ====================================================================================
-# Lec 32 - Download Part1 Power BI Report
+# Download Part1 Power BI Report
 
 visit (github.com/malvik01/powerbi) -> Click: Formula One Analysis Project Part 1 -> click: Download (617 kb)
 ![alt text](image-99.png)
 ![alt text](image-100.png)
 ![alt text](image-101.png)
-
 
 Ensure u have the data sources downloaded.
 

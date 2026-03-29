@@ -1,26 +1,24 @@
-# Lec 7
+# Power BI: Data Loading and Transformation
 
-# Power BI: Data Loading and Transformation Overview
-
-This module covers how to load, transform, and prepare data for reporting using the Query Editor in Power BI.
+how to load, transform, and prepare data for reporting using the Query Editor in Power BI.
 
 ![alt text](image.png)
 
-## Key Terminology
-* **Query vs. Table:** These terms are used interchangeably throughout the course. A **table** is simply the final, polished product of a **query** after all data preparation steps are complete.
+## Terminology
+* **Query vs. Table:** These terms are used interchangeably. A **table** is simply the final, polished product of a **query** after all data preparation steps are complete.
 
-## Key Transformation Steps Covered
-The following data preparation and cleansing techniques will be explored:
+## Transformation Steps
+data preparation and cleansing techniques:
 * **Data Types:** Assigning the correct formats to your data.
 * **Extracting Data from Columns:** Pulling specific information out of existing columns.
 * **Data Cleansing:** Removing unwanted rows and replacing incorrect values.
 * **Basic Operations:** Transposing data to change its structure.
 * **Grouping & Aggregating:** Summarizing query data for better high-level analysis.
 
-# ==================================================================================
-# Lec 8 - Entering Data Manually
+---
+---
 
-# How to Enter Data Manually in Power BI
+# Entering Data Manually
 
 ## Method 1: Entering Data from the Home Tab
 
@@ -42,7 +40,7 @@ The following data preparation and cleansing techniques will be explored:
 - Choose your next action:
   - Click Load to push the data directly into your data model.
   - Click Edit to open the Power Query Editor and perform transformations first.
-- If you clicked Edit, review your data in the preview pane, then click Close & Apply. The data will load into the model and become available in the Fields pane for creating visualizations.
+- If you clicked Edit,  (review your data in the preview pane), then click Close & Apply. The data will load into the model and become available in the Fields pane for creating visualizations.
 
 ## Method 2: Entering Data from the Power Query Editor
 
@@ -54,16 +52,17 @@ The following data preparation and cleansing techniques will be explored:
 ![alt text](image-6.png)
 
 
-## 💡 Pro-Tip: Copy and Paste Data
+## Copy and Paste Data
 
 - Regardless of which method you use to open the "Create Table" window, you do not actually have to type the data manually.
 - If you have tabular data in another program (like an Excel file), you can simply highlight and copy it, click into the "Create Table" window in Power BI, and press Ctrl + V to paste the entire table.
 
-# Lec 9 - Save
+---
+---
 
 # How to Save Your Work in Power BI
 
-Saving your progress in Power BI Desktop is quick and straightforward. Your saved file will retain all of the data and transformations you have applied during your session.
+Saved file will retain all of the data and transformations you have applied.
 
 ## Steps to Save a File
 
@@ -84,20 +83,15 @@ To pick up right where you left off:
 - Double-click the .pbix file to launch Power BI.
 - The file will open, and you will see that all the data loaded from your previous session is still there and ready to use.
 
-## Cleanup Note
-
-If you were just creating a temporary file to test this process (like in the tutorial), you can safely delete the file from your computer once you are done experimenting.
-
-# ======================================================================================
-# Lec 10 - Loading the Races csv data
-
-# Loading Data Sources and CSV Files in Power BI
+# Loading the Races csv data
 
 Power BI can connect to a vast array of data sources. You can view the full list by searching online for "Power BI data sources," or by exploring the "Get Data" menu in the application.
 
 ## Types of Data Sources You Can Load
 
 When you click Get Data and select More, you will see an extensive list of connections organized by categories:
+![alt text](image-139.png)
+![alt text](image-140.png)
 
 - Files: Text/CSV, XML, JSON, Excel, etc.
 - Databases: A wide range of SQL and other database servers.
@@ -105,7 +99,7 @@ When you click Get Data and select More, you will see an extensive list of conne
 
 ## How to Load a CSV File (Example: races.csv)
 
-Follow these steps to import a CSV file into your Power BI Desktop file:
+Follow these steps to import a CSV file into Power BI Desktop file:
 
 - Open Power BI Desktop.
 - Under the Home tab, click on Get Data.
@@ -122,21 +116,19 @@ Follow these steps to import a CSV file into your Power BI Desktop file:
 
 ![alt text](image-9.png)
 
-- Instead of loading the data directly, click Transform Data. This will open the Power Query Editor, creating a new query with your file's name (e.g., "Races") so you can clean the data before using it.
+- click Transform Data. to open the Power Query Editor, creating a new query with your file's name (e.g., "Races") so you can clean the data before using it.
 
 ![alt text](image-10.png)
 
-## 💡 Extra Notes & Tips from the Transcript
+## Note
 
 - Delimiters: Power BI usually detects how your file is separated. For a standard CSV, the delimiter is a comma. If your file is formatted differently, you can change the delimiter to spaces, tabs, or custom characters in the preview window.
-- Initial Data Assessment: Always look at the preview window before hitting load! In this specific example, the races.csv file has blank rows at the top, which pushes the actual column headings down.
-- Next Steps in Power Query: Because the raw file has formatting issues, we use Transform Data to clean it up. The upcoming steps will involve removing those blank rows and promoting the actual headers to the top row.
 
-# Lec 11 - Removing rows & columns
 ---
-## Power Query Editor Interface Overview
+---
 
-When you first open the Power Query Editor (following the import of the races file), there are a few key areas of the interface to familiarize yourself with before making changes to your data.
+# Removing rows & columns
+---
 
 ## 1. The Preview Pane
 
@@ -163,18 +155,20 @@ To see or edit exactly where your data is coming from, locate this initial conne
 Click on the small gear icon (widget) next to it.
 
 This will open a prompt displaying the specific connection details and file path for your data source.
+![alt text](image-141.png)
+![alt text](image-142.png)
+
 ---
 
 # Removing Rows and Columns in Power Query
 
-When cleaning data in the Power Query Editor, there are multiple ways to remove unwanted rows and columns. Below are the methods demonstrated in the tutorial.
+When cleaning data in the Power Query Editor, there are multiple ways to remove unwanted rows and columns. 
 
 ## Managing Rows
 
 ### Method 1: Remove Top Rows
 
 - How to do it: Go to the Home ribbon -> click Remove Rows -> select Remove Top Rows -> and enter the number of rows to delete (e.g., 9).
-- Instructor Action: Undone.
 
 ![alt text](image-12.png)
 ![alt text](image-14.png)
@@ -183,8 +177,7 @@ When cleaning data in the Power Query Editor, there are multiple ways to remove 
 
 ### Method 2: Remove Blank Rows
 
-- How to do it: Click Remove Rows and select Remove Blank Rows. This automatically clears any row that is completely blank.
-- Instructor Action: Undone.
+- How to do it: Go to the Home ribbon -> click Remove Rows ->  Remove Blank Rows. This automatically clears any row that is completely blank.
 
 ![alt text](image-17.png)
 ![alt text](image-16.png)
@@ -192,25 +185,28 @@ When cleaning data in the Power Query Editor, there are multiple ways to remove 
 ### Method 3: Filter Out Blank Rows
 
 - How to do it: Click the dropdown icon directly on a column's header. Uncheck the "blank" or "null" values to filter them out of the dataset.
-- Instructor Action: Undone. (The instructor notes that while this works, using "Remove Blank Rows" is usually a more robust method for this specific issue ==> Keep step).
 
 ![alt text](image-18.png)
+
+Note : To remove blank rows, Use method 2 (Remove Blank Rows) instead of method 1 (Remove Top Rows) to avoid accidental deletion of top rows.
 
 ## Fixing Headers
 
 ### Method 4: Use First Row as Headers
 
-- How to do it: Click the Use First Row as Headers button on the Home ribbon to push the top row of data up into the column name slots. (Note: You can also do the reverse by selecting "Use Headers as First Row").
-- Instructor Action: Undone.
+- How to do it: Click the **Use First Row as Headers** button on the **Home ribbon** to push the top row of data up into the column name slots. (Note: You can also do the reverse by selecting "Use Headers as First Row").
 
 ![alt text](image-19.png)
+![alt text](image-143.png)
+
+Note : If we select **Use headers as first row** then,
+![alt text](image-144.png)
 
 ## Managing Columns
 
 ### Method 5: Remove a Single Column
 
 - How to do it: Click on the column header you want to delete (e.g., URL), then click the Remove Columns button on the ribbon.
-- Instructor Action: Undone.
 
 ![alt text](image-20.png)
 
@@ -241,12 +237,12 @@ or
 Final
 ![alt text](image-27.png)
 
-# ==================================================================================
-# Lec 12 - Data Types
+---
+---
 
-# Understanding Data Types in Power BI
+# Data Types
 
-This guide covers how Power BI handles data types, how to manage auto-detection, and a complete breakdown of the specific data types available in the Power Query Editor.
+how Power BI handles data types, how to manage auto-detection:
 
 ## 1. Accessing the Power Query Editor
 
@@ -257,6 +253,7 @@ This guide covers how Power BI handles data types, how to manage auto-detection,
 ## 2. Auto-Detection of Data Types
 
 When you load data or promote headers, Power Query automatically creates a Changed Type step in your "Applied Steps" pane.
+![alt text](image-145.png)
 
 - How it works: Power Query samples the first 200 rows of a column to guess the correct data type.
 - Limitations: It is not always perfect (e.g., a Date column might mistakenly be formatted as "ABC" text), so manual adjustments are often required.
@@ -274,7 +271,7 @@ When you load data or promote headers, Power Query automatically creates a Chang
 
 To manually change a column's data type, simply click the small icon on the left side of the column header (e.g., the ABC or 123 square) and select the correct format from the dropdown menu.
 
-## 4. Complete List of Data Types
+## 4. List of Data Types
 
 ### Numerical Data Types
 
@@ -311,8 +308,6 @@ Microsoft provides official documentation outlining all of these data types in d
 
 ## 6. Practical Example: Validating Data Types & Fixing Date Locales (Races Query)
 
-After loading a query (like the races dataset), you must validate that Power BI assigned the correct data types.
-
 ### Step A: Validating Correct Types
 
 - Whole Numbers: Check columns like raceId, year, round, and circuitId. If they show the 123 icon, they are correctly identified as Whole Numbers.
@@ -322,6 +317,7 @@ After loading a query (like the races dataset), you must validate that Power BI 
 
 Sometimes, a date column will show the ABC (Text) icon instead of a calendar icon. If you try to directly change it to a Date data type, you might get an error message (e.g., 59% of rows returning errors).
 
+![alt text](image-146.png)
 ![alt text](image-30.png)
 ![alt text](image-31.png)
 
@@ -342,6 +338,7 @@ If you encounter this error, undo the broken "Changed Type" step and follow thes
 - Click the data type icon (ABC) on the date column header.
 - Select Using Locale at the very bottom of the menu.
 
+![alt text](image-147.png)
 ![alt text](image-32.png)
 ![alt text](image-33.png)
 
@@ -360,14 +357,14 @@ Once your data types are correctly assigned and validated:
 - Click Close & Apply in the top left corner of the Home ribbon to exit the Query Editor and apply your transformations to the data model.
 - Save your report to retain these changes for your next session.
 
-# =====================================================================================
-# Lec 13 - Working with Columns 
+---
+---
 
-# Basic Column Operations in Power Query
+# Working with Columns 
 
-This guide covers fundamental column management tasks in the Power Query Editor, including rearranging, renaming, and understanding the critical difference between the Transform and Add Column tabs.
+Column rearranging, renaming, and understanding the critical difference between the Transform and Add Column tabs.
 
-## 1. Getting Started
+## 1. Start
 
 To begin making these changes, you first need to open your data in the Power Query Editor:
 
@@ -376,7 +373,7 @@ To begin making these changes, you first need to open your data in the Power Que
 
 ## 2. Rearranging Columns
 
-You can easily change the order of your columns to make your dataset easier to read or navigate. The transcript demonstrates two primary methods:
+You can easily change the order of your columns to make your dataset easier to read or navigate.
 
 ### Method 1: Drag and Drop
 
@@ -398,17 +395,11 @@ Click on the column header you want to move. Navigate to the Transform tab, clic
 
 ## 3. Renaming Columns
 
-To make your data model cleaner, more consistent, and easier to query later, you should rename your columns to standard naming conventions.
-
 ### How to rename (Two Methods):
 
 1. Double-click directly on the column header text.
-2. Click to highlight the column, then right-click the header and select Rename.
+2. Click to highlight the column, Transform Tab -> Rename.
 ![alt text](image-37.png)
-
-### Follow-Along Actions (Formula 1 Data):
-
-The instructor explicitly asks viewers to make the following three column name changes to follow along with the project:
 
 - Rename raceId to race_id
 - Rename CircuitId to circuit_id
@@ -416,53 +407,42 @@ The instructor explicitly asks viewers to make the following three column name c
 
 ## 4. The Difference Between "Transform" vs. "Add Column" Tabs
 
-As you navigate the Power Query ribbon, you will notice that both the Transform tab and the Add Column tab share many of the exact same tools and icons (such as Extract and Format). Understanding how these two tabs treat your data differently is a vital concept in Power BI.
-
-To illustrate the difference, the instructor uses the Format > Uppercase tool on a text column:
+As you navigate the Power Query ribbon, you will notice that both the Transform tab and the Add Column tab share many of the exact same tools and icons (such as Extract and Format).
 
 ### The Transform Tab (Modifies In-Place):
 
 When you use a tool from this tab, the change happens directly to the column you currently have selected.
 
-Example: If you select the grand_prix column, go to the Transform tab, and click Format > Uppercase, the existing text inside that specific column is instantly and completely converted to uppercase. The original lowercase data is overwritten.
+Example: If you select the grand_prix column -> go to the Transform tab -> click Format > Uppercase, the existing text inside that specific column is instantly and completely converted to uppercase. The original lowercase data is overwritten.
 
 ![alt text](image-38.png)
 ![alt text](image-39.png)
-undo
 
 ### The Add Column Tab (Creates a New Column):
 
 When you use a tool from this tab, Power Query preserves your original column exactly as it is, and creates a brand new column in your table with the formatted data.
 
-Example: If you select the grand_prix column, go to the Add Column tab, and click Format > Uppercase, your original grand_prix column stays exactly the same. However, a new column is appended to the table containing a copy of that data converted to uppercase.
-
-(Instructor Action: The instructor demonstrated the Uppercase format using both tabs to show the visual difference, but used the "Applied Steps" pane to undo both of these steps afterward so the data remained in its original state).
+Example: If you select the grand_prix column -> go to the Add Column tab -> click Format > Uppercase, your original grand_prix column stays exactly the same. However, a new column is appended to the table containing a copy of that data converted to uppercase.
 
 ![alt text](image-40.png)
 ![alt text](image-41.png)
 
 ## 5. Saving Your Progress
 
-Once your columns are renamed and you are done exploring:
-
 - Go to the Home tab in the Power Query Editor.
-- Click Close & Apply to apply these structural changes to your overall data model.
-- Save your Power BI Desktop file before closing it to ensure your work is retained for the next lecture.
-
-# ==================================================================================
-# Lec 14 - Splitting 
-
-# Power Query Editor: Split and Extract Methods
-
-This guide covers the step-by-step processes for **splitting columns** and **extracting specific data strings** using the Power Query Editor in Power BI.
+- Click Close & Apply to apply these structural changes to overall data model.
+- Save Power BI Desktop file before closing it to ensure work is retained for the next lecture.
 
 ---
+---
 
-## 1. Getting Started: Opening Power Query Editor
+# Splitting / Extracting information from the columns
 
-Before performing any splits or extractions, you need to open the editor.
+## 1. Opening Power Query Editor
 
-- Open your Power BI Desktop file.
+Before performing any splits or extractions, open the editor.
+
+- Open Power BI Desktop file.
 - On the **Home ribbon**, click on **Transform Data**.
 - This opens the **Power Query Editor** in a new window.
 
@@ -649,20 +629,18 @@ Select Date Column -> Transform tab -> Date and Time column section -> Date drop
 
 ---
 
-## 💡 Additional Tips & Important Info from the Lecture
-
-- **Clean Up After Practice:** If you are just testing these features for demonstration purposes, remember to revert your data by deleting the applied steps in the **"Applied Steps"** pane on the right side of the screen.
+## Additional Info
 
 - **Null Values:** When splitting columns, if a row doesn't have enough delimiters to fill all the newly created columns, Power BI will automatically fill those empty spaces with **null**.
 
 - **Missing Delimiters:** If you try to split a column by a delimiter that doesn't exist in the data (like trying to split by a comma when there are no commas), nothing will happen, and the result will be full of **null values**.
 
-- **Auto-Detection:** Power BI is often intelligent enough to auto-detect the delimiter for you based on the column's contents (like automatically detecting the / in date strings).
+- **Auto-Detection:** Power BI is often intelligent enough to auto-detect the delimiter for you based on the column's contents.
 
-# =====================================================================================
-# Lec 15 - Simple Mathematical Operation
+---
+---
 
-# Mathematical and Statistical Operations
+# Simple Mathematical Operation
 
 **Navigation Path:**  
 Select Numerical Column(s) -> Transform tab (Number Column section) OR Add Column tab (From Number section)
@@ -747,14 +725,14 @@ How these calculate depends entirely on **how many columns you select** and **wh
 **Result:** The entire table is replaced by a **single scalar value**  representing the statistic for that entire column  (e.g., the overall average of all values in the column).
 ![alt text](image-96.png)
 
-# =================================================================================
-# Lec 16 - Duplicate, Index and Conditional columns 
+---
+---
 
-# In this guide, we will explore three useful features in the Power Query Editor found under the Add Column tab: Duplicating Columns, Index Columns, and Conditional Columns.
+# Duplicate, Index and Conditional columns 
 
 ## 1. Duplicating a Column
 
-Duplicating a column creates an exact copy of the selected column, including its values and data type. This is particularly useful if you want to perform transformations on a column but still need to retain the original unedited data.
+Duplicating a column creates an exact copy of the selected column, including its values and data type.
 
 ### How to duplicate a column:
 
@@ -803,7 +781,7 @@ Conditional columns are a powerful way to implement custom IF/THEN/ELSE logic in
 ![alt text](image-106.png)
 ![alt text](image-107.png)
 
-### Example A: The Hybrid Era (Greater Than / Less Than)
+### Example A: The Hybrid Era
 
 Let's say you want to categorize Formula One races based on the year the "Hybrid Era" began (2014).
 
@@ -827,7 +805,7 @@ You can assign specific values based on exact text matches, and you can add mult
 ![alt text](image-110.png)
 ![alt text](image-111.png)
 
-## ⚠️ Crucial Concept: The Order of Clauses Matters!
+## Concept: The Order of Clauses Matters
 
 When you have multiple clauses in a Conditional Column, they are evaluated from top to bottom.
 
@@ -840,16 +818,15 @@ Example: If Clause #1 says "If Australian Grand Prix, output 9", and Clause #2 s
 
 Tip: Always arrange your clauses from the most specific rule at the top, to the most general rule at the bottom.
 
-# ========================================================================================
-# Lec 17 - Refreshing Source Data
-
-In this guide, we will explore how Power Query interacts with your original source data, how to feed updates into your Power BI project, and how changes in your source file can both update and potentially break your queries.
-
+---
 ---
 
-## 1. The Core Rule: A One-Way Relationship
+# Refreshing Source Data
+---
 
-It is crucial to understand that the relationship between the Power Query Editor and your source data file (like a CSV or Excel file on your desktop) is a one-way street:
+## 1. Rule: A One-Way Relationship
+
+It is crucial to understand that the relationship between the Power Query Editor and your source data file (like a CSV or Excel file on your desktop) is one-way:
 
 - Transformations made in Power Query have **NO impact on the source data itself**. Your original file remains completely safe and unchanged, no matter what you do in Power BI.
 
@@ -897,10 +874,10 @@ When cleaning up messy source data that has empty rows at the top, the specific 
 ### The Problem:
 
 - If the source data is later updated and those blank rows are removed by whoever generated the file, Power Query will still blindly delete the first 9 rows.
-> Note: We now have 0 blank rows at top in the sourch file, that's why.
+
 - This will accidentally delete your column headers and the first 8 rows of your actual, valuable data!
 
-### The Solution:
+> Note: We now have 0 blank rows at top in the sourch file, that's why.
 
 - Instead of "Remove Top Rows", go to the **Home tab -> Remove Rows -> Remove Blank Rows**.
 
@@ -945,16 +922,16 @@ OR,
 
 - Go into the **Advanced Editor** or formula bar in Power Query and manually update the hardcoded text from **"raceId"** to **"race_number"** in every step that references it.
 
-# =======================================================================================
-# Lec 18 - Sorting Data
+---
+---
 
-In this guide, we will explore how to organize your dataset by sorting single and multiple columns in the Power Query Editor, and how to permanently apply those changes to your Power BI project.
+# Sorting Data
 
 ---
 
 ## 1. Basic Single-Column Sorting
 
-You can easily organize your data in ascending or descending order. The way Power Query sorts the values is directly determined by the data type of the column (e.g., text sorts alphabetically, numbers sort numerically, dates sort chronologically).
+The way Power Query sorts the values is directly determined by the data type of the column (e.g., text sorts alphabetically, numbers sort numerically, dates sort chronologically).
 
 ### How to sort a single column:
 
@@ -982,7 +959,7 @@ Let's say you want to sort the **"Grand Prix"** column in alphabetical order so 
 
 You can sort your dataset using more than one column.
 
-⚠️ **Crucial Concept: The Order of Sorting Matters!**
+**Concept: The Order of Sorting Matters**
 
 When applying multiple sorts, the order in which you click the columns dictates the hierarchy. The first column you sort becomes your **"Primary" sort (Priority 1)**, and the second column becomes your **"Secondary" sort (Priority 2)**.
 
@@ -1000,8 +977,6 @@ Let's say you want to see the most recent races first, and within each year, you
 ![alt text](image-127.png)
 **Result:** The latest year (e.g., 2020) jumps to the top of the table.
 
----
-
 #### Step 2: The Secondary Sort (Round)
 
 - Click the dropdown on the **Round** column.
@@ -1013,7 +988,7 @@ Let's say you want to see the most recent races first, and within each year, you
 
 ---
 
-## 💡 Visual UI Indicator
+## Visual UI Indicator
 
 When you apply multiple sorts, look closely at the column headers. You will notice a little number next to the sort arrow icon:
 
@@ -1024,8 +999,6 @@ When you apply multiple sorts, look closely at the column headers. You will noti
 
 ## 3. Applying Changes and Saving
 
-Unlike previous demonstration exercises, if you want to keep these sorting transformations for your actual project, you must apply them to the data model.
-
 ### How to apply and save:
 
 - Go to the **Home tab** in the Power Query Editor.
@@ -1035,10 +1008,12 @@ Unlike previous demonstration exercises, if you want to keep these sorting trans
 
 Finally, be sure to hit **Save (Ctrl+S)** on your main Power BI Desktop file so you don't lose your work!
 
-# =================================================================================
-# Lec 19 - Filtering Values
+---
+---
 
-In this guide, we will explore how to filter records in your dataset. Just like sorting, filtering options are accessed via column dropdowns, and the specific filtering options available will dynamically change based on the column's data type.
+# Filtering Values
+
+Just like sorting, filtering options are accessed via column dropdowns, and the specific filtering options available will dynamically change based on the column's data type.
 
 ---
 
@@ -1087,19 +1062,17 @@ A pop-up window will appear to configure your logic.
 ![alt text](image-135.png)  ![alt text](image-136.png)
 ---
 
-## ⚠️ Crucial Concept: "AND" vs. "OR" Logic
+## Concept: "AND" vs. "OR" Logic
 
 In the step above, selecting the correct logical condition is vital:
 
-- **AND:** The row must satisfy both rules to be kept. (e.g., It must be 2000 or newer, AND it must be 2020 or older). This correctly filters the chunk of time.
+- **AND:** The row must satisfy both rules to be kept. (e.g., It must be 2000 or newer, AND it must be 2020 or older). 
 
-- **OR:** The row only needs to satisfy one of the rules to be kept. If you selected **"OR"** in the example above, Power Query would keep years newer than 2000 or years older than 2020. Because every year in existence fits at least one of those criteria, nothing would be filtered out.
+- **OR:** The row only needs to satisfy one of the rules to be kept. Keep years newer than 2000 or years older than 2020. Since every year in existence fits at least one of those criteria, nothing would be filtered out.
 
 ---
 
 ## 3. Data Type Specific Filters
-
-Power Query is context-aware. If you try to filter a column that isn't a number, you will get completely different menus tailored to that specific data type.
 
 ### Text Filters
 
